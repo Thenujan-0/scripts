@@ -25,3 +25,5 @@ echo "source ~/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh">> .zshrc
 
 #bind ` to autosuggest-accept
 echo "bindkey '`' autosuggest-accept" >> .zshrc
+
+echo "execution finished"
