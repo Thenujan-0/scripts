@@ -24,6 +24,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 echo "source ~/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh">> .zshrc
 
 #bind ` to autosuggest-accept
-echo "bindkey '`' autosuggest-accept" >> .zshrc
+echo "bindkey '\`' autosuggest-accept" >> .zshrc
 
 echo "execution finished"
