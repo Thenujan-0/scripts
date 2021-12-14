@@ -20,7 +20,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 
 #zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/zsh-autosuggestions
 echo "source ~/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh">> .zshrc
 
 #bind ` to autosuggest-accept
