@@ -1,6 +1,10 @@
 #! /bin/sh
+if [ -f "/etc/arch-release" ]; then
+  sudo pacman -S zsh
+else
+  sudo apt install zsh
+fi
 
-sudo pacman -S zsh
 
 user=$(whoami)
 echo "hello $user , how you doin"
