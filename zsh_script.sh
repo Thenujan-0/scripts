@@ -19,24 +19,29 @@ else
     chsh -s /bin/zsh $user
 
     #zsh syntax highlighting
-    mkdir ~/.scripts
-    cd ~/.scripts
+    mkdir ~/.zshPlugins
+    cd ~/.zshPlugins
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-    echo "source ~/.scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+    echo "source ~/.zshPlugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
 
 
     #zsh powerlevel10k
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zshPlugins/powerlevel10k
+    echo 'source ~/.zshPlugins/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
 
     #zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/zsh-autosuggestions
-    echo "source ~/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh">> .zshrc
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zshPlugins/zsh-autosuggestions
+    echo "source ~/.zshPlugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh" >> ~/.zshrc
 
     #bind ` to autosuggest-accept
-    echo "bindkey '\`' autosuggest-accept" >> .zshrc
+    echo "bindkey '\`' autosuggest-accept" >> ~/.zshrc
+
+    #to stop the issues that will be caused by console output of neofetch
+    echo "typeset -g POWERLEVEL9K_INSTANT_PROMPT=off" >> ~/.zshrc
+
+    echo "neofetch" >> ~/.zshrc
 
     echo "execution finished"
     exit 0 # implicit, here it serves the purpose to be explicit for the reader
