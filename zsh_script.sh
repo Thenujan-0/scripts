@@ -40,6 +40,12 @@ else
 
     #to stop the issues that will be caused by console output of neofetch
     echo "typeset -g POWERLEVEL9K_INSTANT_PROMPT=off" >> ~/.zshrc
+    
+    # to save zsh history
+    echo "HISTFILE=~/.zsh_history" >> ~/.zshrc
+    echo "HISTSIZE=10000" >> ~/.zshrc
+    echo "SAVEHIST=10000" >> ~/.zshrc
+    echo "setopt appendhistory" >> ~/.zshrc
 
     echo "neofetch" >> ~/.zshrc
 
